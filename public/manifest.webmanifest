@@ -1,0 +1,18 @@
+ 
+{
+    "name": "Advanced Calculator",
+    "short_name": "Calculator",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#adc1e2",
+    "theme_color": "#adc1e2",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "./logo.png",
+        "type": "image/png",
+        "sizes": "200x200"
+      }
+    ]
+    
+  }
