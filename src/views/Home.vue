@@ -302,7 +302,10 @@ methods: {
         })}
             //console.log(response.data)
         }).catch((err) => {
-            console.log(err)})
+            console.log(err)
+            this.showAnswerPart3("Had problem with connection to server. Please check your internet connection")
+            
+            })
     },
     deriv: function() {
         const chatMessages = document.querySelector('#showtime');
@@ -322,7 +325,10 @@ methods: {
             this.showAnswerPart2(r)
             }
             }).catch((err) => {
-                console.log(err)})
+                console.log(err)
+                this.showAnswerPart3("Had problem with connection to server. Please check your internet connection")
+
+                })
         /*catch(err) {
             let l = `Derivative of `
             this.showAnswerPart1(l)
@@ -360,7 +366,10 @@ methods: {
             this.showAnswerPart2(r)
             }
             }).catch((err) => {
-                console.log(err)})
+                console.log(err)
+                this.showAnswerPart3("Had problem with connection to server. Please check your internet connection")
+
+                })
       },
       calcLimit:function(val) {
           const chatMessages = document.querySelector('#showtime');
@@ -383,7 +392,10 @@ methods: {
             //r = math.round(r,5)
             this.showAnswerPart2(r)}
         }).catch((err) => {
-            console.log(err)})
+            console.log(err)
+            this.showAnswerPart3("Had problem with connection to server. Please check your internet connection")
+
+            })
       },
       main :function() {
         this.comToShow = 'showRes'
