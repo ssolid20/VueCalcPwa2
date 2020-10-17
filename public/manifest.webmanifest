@@ -2,7 +2,7 @@
 {
     "name": "Advanced Calculator",
     "short_name": "Calculator",
-    "start_url": "/dist/",
+    "start_url": "/?utm_source=a2hs",
     "display": "standalone",
     "background_color": "#adc1e2",
     "theme_color": "#adc1e2",
