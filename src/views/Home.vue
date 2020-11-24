@@ -222,7 +222,7 @@ methods: {
     },
     special100:function(){
         if (this.changeButtons===false) {this.putText3('In()')}
-        else{this.putText2('rad')}
+        else{this.putText3('rad')}
     },
     chbuttons:function(){
         if (this.changeButtons===false) {
