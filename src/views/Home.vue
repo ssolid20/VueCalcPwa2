@@ -248,7 +248,7 @@ methods: {
             x7.innerText='i';
             x8.innerText='abs'
             x9.innerText='∞';
-            x10.innerText='rad'
+            x10.innerText='rad';
 
         }
         else {
