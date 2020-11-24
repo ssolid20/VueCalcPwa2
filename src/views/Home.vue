@@ -221,7 +221,7 @@ methods: {
         else{this.putText2('∞')}
     },
     special100:function(){
-        if (this.changeButtons===false) {putText3('In()')}
+        if (this.changeButtons===false) {this.putText3('In()')}
         else{this.putText2('rad')}
     },
     chbuttons:function(){
