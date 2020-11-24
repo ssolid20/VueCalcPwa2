@@ -222,7 +222,7 @@ methods: {
     },
     special100:function(){
         if (this.changeButtons===false) {this.putText3('In()')}
-        else{this.putText3('rad')}
+        else{this.putText4('rad')}
     },
     chbuttons:function(){
         if (this.changeButtons===false) {
@@ -248,7 +248,7 @@ methods: {
             x7.innerText='i';
             x8.innerText='abs'
             x9.innerText='∞';
-            x10.innertText='rad'
+            x10.innerText='rad'
 
         }
         else {
@@ -274,7 +274,7 @@ methods: {
             x7.innerText='π'
             x8.innerText='e';
             x9.innerText="!"
-            x10.innertText='In()'
+            x10.innerText='In()'
 
         }
     },
