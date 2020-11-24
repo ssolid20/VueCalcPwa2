@@ -43,8 +43,8 @@
                     <button v-bind:class="{ int: !this.$store.state.count, int2:this.$store.state.count}"  v-on:mousedown.prevent="putText(9)" >9</button>
                     <button v-bind:class="{ int: !this.$store.state.count, int2:this.$store.state.count}"  v-on:mousedown.prevent="putText('+')" >+</button>
                     <button v-bind:class="{ int: !this.$store.state.count, int2:this.$store.state.count}"  v-on:mousedown.prevent="putText('-')">-</button>
-
-                    <button   v-bind:class="{ calc: !this.$store.state.count, calc2:this.$store.state.count}" v-on:mousedown.prevent="putText3('In()')" >In(x)</button>
+                                                                                                            <!--putText3('In()')-->
+                    <button id="special100"    v-bind:class="{ calc: !this.$store.state.count, calc2:this.$store.state.count}" v-on:mousedown.prevent="special100" >In(x)</button>
                     <button   v-bind:class="{ calc: !this.$store.state.count, calc2:this.$store.state.count}" v-on:mousedown.prevent="putText5('log( ,10)')" >log(x)</button>
                     <button  v-bind:class="{ calc: !this.$store.state.count, calc2:this.$store.state.count}" v-on:mousedown.prevent="deriv">dy/dx</button>
 
@@ -197,15 +197,15 @@ methods: {
         else{this.putText('⩾')}
     },
     special5:function(){
-        if (this.changeButtons===false) {this.putText4('sin{ }')}
+        if (this.changeButtons===false) {this.putText4('sin()')}
         else{this.putText5('asin()')}
     },
     special6:function(){
-        if (this.changeButtons===false) {this.putText4('cos{ }')}
+        if (this.changeButtons===false) {this.putText4('cos()')}
         else{this.putText5('acos()')}
     },
     special7:function(){
-        if (this.changeButtons===false) {this.putText4('tan{ }')}
+        if (this.changeButtons===false) {this.putText4('tan()')}
         else{this.putText5('atan()')}
     },
     special10:function() {
@@ -220,6 +220,10 @@ methods: {
         if (this.changeButtons===false) {this.putText('{}!')}
         else{this.putText2('∞')}
     },
+    special100:function(){
+        if (this.changeButtons===false) {putText3('In()')}
+        else{this.putText2('rad')}
+    },
     chbuttons:function(){
         if (this.changeButtons===false) {
             this.changeButtons=true
@@ -233,7 +237,7 @@ methods: {
             let x7 = document.querySelector('#special10')
             let x8 = document.querySelector('#special11')
             let x9=document.querySelector('#special12');
-
+            let x10 = document.querySelector('#special100')
             x.innerText= '['
             x1.innerText= ']'
             x2.innerText='⩽'
@@ -243,11 +247,13 @@ methods: {
             x6.innerText='atan(x)'
             x7.innerText='i';
             x8.innerText='abs'
-            x9.innerText='∞'
+            x9.innerText='∞';
+            x10.innertText='rad'
 
         }
         else {
             this.changeButtons=false
+            let x10 = document.querySelector('#special100')
             let x = document.querySelector('#special1')
             let x1 = document.querySelector('#special2')
             let x2 = document.querySelector('#special7')
@@ -268,6 +274,8 @@ methods: {
             x7.innerText='π'
             x8.innerText='e';
             x9.innerText="!"
+            x10.innertText='In()'
+
         }
     },
     solve :function(){
@@ -531,7 +539,7 @@ methods: {
         r =r.replace(')|',')')
         r=r.replace('|(','abs(')
         r =r.replace(')|',')')
-        if (this.$store.state.addDeg===true){
+       /* if (this.$store.state.addDeg===true){
             if (r.includes('sin{') || r.includes('cos{') || r.includes('tan{')){
                         r = r.replace(/sin{/g ,"sin(deg ");
                         r = r.replace(/cos{/g ,"cos(deg ");
@@ -545,7 +553,7 @@ methods: {
             if (r.includes('cos{')) {r = r.replace(/cos{/g ,"cos( "); r = r.replace(/}/g,")")}
             if (r.includes('tan{')) {r = r.replace(/tan{/g ,"tan( "); r = r.replace(/}/g,")")}
 
-            }
+            }*/
         console.log(r)
         if (r.includes('π'))  {
             r = r.replace(/π/g,'pi')
