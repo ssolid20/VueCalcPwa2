@@ -6,7 +6,6 @@
         <button v-bind:class="{navHead: !this.$store.state.count, navHead2:this.$store.state.count}" v-on:click="third"> Plots</button>
         <button v-bind:class="{navHead: !this.$store.state.count, navHead2:this.$store.state.count}" v-on:click="home"> Calculator</button>
         <button v-bind:class="{navHead: !this.$store.state.count, navHead2:this.$store.state.count}" v-on:click="about"> About</button>
-        <button v-bind:class="{navHead: !this.$store.state.count, navHead2:this.$store.state.count}" v-on:click="degorrad">{{this.angle}}</button>
         <button v-bind:class="{navHead: !this.$store.state.count, navHead2:this.$store.state.count}"  v-on:click="changeColor"> 
             <span class="material-icons">{{this.$store.state.icon}}</span>
         </button>
